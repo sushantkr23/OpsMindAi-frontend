@@ -1,5 +1,4 @@
 import MessageBubble from "./MessageBubble";
-import CitationCard from "./CitationCard";
 import "../../chat.css";
 
 export default function ChatWindow({ messages, messagesEndRef }) {
@@ -27,16 +26,7 @@ export default function ChatWindow({ messages, messagesEndRef }) {
                   {message.text}
                 </div>
               ) : (
-                <>
-                  <MessageBubble message={message} />
-                  {message.sources && message.sources.length > 0 && (
-                    <div className="citations">
-                      {message.sources.map((source, idx) => (
-                        <CitationCard key={idx} source={source} index={idx + 1} />
-                      ))}
-                    </div>
-                  )}
-                </>
+                <MessageBubble message={message} />
               )}
             </div>
           ))}
