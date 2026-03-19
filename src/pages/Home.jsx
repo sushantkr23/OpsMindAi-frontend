@@ -233,7 +233,7 @@ export default function Home() {
               className="btn-send"
               title="Send question"
             >
-              {loading ? "⏳" : "📤"}
+              {loading.. ? "⏳" : "📤"}
             </button>
           </form>
         </div>
